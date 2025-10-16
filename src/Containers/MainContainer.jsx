@@ -2,9 +2,10 @@ import React from 'react'
 import Container from '@mui/material/Container';
 
 function MainContainer({children}) {
-    console.log(children)
     return (
-        <Container>{children}</Container>
+        <Container maxWidth='Err' className='MainContainer'>
+            {children}
+        </Container>
     )
 }
 
