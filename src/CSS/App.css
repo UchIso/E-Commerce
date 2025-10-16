@@ -2,7 +2,7 @@
   @apply flex flex-col items-center justify-center
 }
 
-.Header{
+#Header{
   @apply w-full flex bg-[#5f5f5f] justify-around items-center p-2
 }
 .LogoDiv{
