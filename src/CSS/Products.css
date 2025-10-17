@@ -2,6 +2,6 @@
     @apply grid grid-cols-4 gap-5 p-5 bg-[#3a3a3a]
 }
 
-.Product{
-    @apply flex flex-col items-center justify-center
+.Card{
+    @apply h-[755px] grid grid-rows-4 gap-5 items-center justify-center border-[#7f7f7f] border-2 p-5 
 }
