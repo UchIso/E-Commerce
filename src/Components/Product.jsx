@@ -10,8 +10,8 @@ export default function Product({product}) {
     <div className='Product'>
         <img src={image} alt="Product_Img" />
         <h2>{title}</h2>
-        <h2 >{price}</h2>
         <h4>{category}</h4>
+        <h2>{price}$</h2>
         <button onClick={()=>navigate('/Product-Detail/'+id)} className='border-2 border-black'>Details</button>
     </div>
   )

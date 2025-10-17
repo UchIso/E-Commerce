@@ -3,6 +3,7 @@ import MainContainer from './Containers/MainContainer'
 import Header from './Components/Header'
 import './CSS/App.css'
 import RouterConfig from './Configs/RouterConfig'
+import Loading from './Components/Loading'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div>
       <MainContainer>
         <Header/>
+        <Loading />
         <RouterConfig />
       </MainContainer>
     </div>
