@@ -2,7 +2,7 @@ import { useState } from 'react'
 import MainContainer from './Containers/MainContainer'
 import Header from './Components/Header'
 import './CSS/App.css'
-import ProductsList from './Components/ProductsList'
+import RouterConfig from './Configs/RouterConfig'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <div>
       <MainContainer>
         <Header/>
-        <ProductsList />
+        <RouterConfig />
       </MainContainer>
     </div>
   )

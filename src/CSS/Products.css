@@ -1,0 +1,7 @@
+.ProductList{
+    @apply grid grid-cols-4 gap-5 p-5 bg-[#3a3a3a]
+}
+
+.Product{
+    @apply flex flex-col items-center justify-center
+}

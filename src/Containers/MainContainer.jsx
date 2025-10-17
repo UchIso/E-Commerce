@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 
 function MainContainer({children}) {
     return (
-        <Container maxWidth='Err' className='MainContainer'>
+        <Container maxWidth='xl' className='MainContainer'>
             {children}
         </Container>
     )
