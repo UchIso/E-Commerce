@@ -11,8 +11,8 @@ function App() {
     <div>
       <MainContainer>
         <Header/>
-        <Loading />
         <RouterConfig />
+        <Loading />
       </MainContainer>
     </div>
   )

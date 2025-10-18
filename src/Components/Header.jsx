@@ -3,6 +3,9 @@ import { BiLabel } from 'react-icons/bi';
 import { CiDark , CiLight , CiSearch  } from "react-icons/ci";
 import { SiVitest } from "react-icons/si";
 import { useNavigate } from 'react-router-dom';
+import { FaShoppingBasket } from "react-icons/fa";
+import Badge from '@mui/material/Badge';
+import { useSelector } from 'react-redux';
 
 function Header() {
   
@@ -16,6 +19,8 @@ function Header() {
     Shadow:"#C7C8C2",
     Text:"#E6E7E1",
   })
+
+  const {products} = useSelector((store) => store.Basket)
   
   const ChangeTheme = ()=> {
     if(ThemeCh){
@@ -49,6 +54,11 @@ function Header() {
           
           <div style={{boxShadow: "0px 0px 10px"+Theme.Shadow}} className='Tehem'>
             {ThemeCh? <CiDark onClick={ChangeTheme} className="cursor-pointer" /> : <CiLight onClick={ChangeTheme} className="cursor-pointer" />}
+          </div>
+          <div className='Tehem'>
+            <Badge badgeContent={products.length} color='warning'>
+              <FaShoppingBasket/>
+            </Badge>
           </div>
         </div>
     </div>
