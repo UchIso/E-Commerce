@@ -5,3 +5,9 @@
 .Card{
     @apply h-[755px] grid grid-rows-4 gap-5 items-center justify-center border-[#7f7f7f] border-2 p-5 
 }
+.ProductDetails{
+    @apply flex justify-center w-full p-5 pt-10 bg-[#3a3a3a] gap-10
+}
+.RatingStars{
+    @apply flex gap-1 text-3xl
+}

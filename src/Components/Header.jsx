@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { BiLabel } from 'react-icons/bi';
 import { CiDark , CiLight , CiSearch  } from "react-icons/ci";
 import { SiVitest } from "react-icons/si";
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
   
+  const navigate = useNavigate()
+
   const Body = document.body
   const [ThemeCh,SetThemeCh] = useState(false)
   const [Theme,SetTheme] = useState({
@@ -33,7 +36,7 @@ function Header() {
 
   return (
     <div style={{color:Theme.Text , background:Theme.Header}} id='Header'>
-        <div className='LogoDiv'>
+        <div onClick={()=>navigate('/')} className='LogoDiv'>
             <SiVitest className='text-5xl' />
             <h2>Fake React E-commerce</h2>
         </div>

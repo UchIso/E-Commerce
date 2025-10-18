@@ -11,7 +11,7 @@ export default function Product({product}) {
       <div className='h-full flex items-center row-span-3'>
         <img className='' src={image} alt="Product_Img" />
       </div>
-      <div className='size-full p-5 bottom-0'>
+      <div className='size-full'>
         <h2 className='text-sm'>{title}</h2>
         <h4 className='text-lg font-bold'>#{category}</h4>
         <h2 className='text-xl font-extrabold'>{price}$</h2>
