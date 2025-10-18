@@ -25,7 +25,7 @@ export const BasketSlice = createSlice({
             const FindProduct = state.products && state.products.find((product)=> product.id == action.payload.id)
             if(FindProduct){
                 const extractedProducts = state.products.filter((product)=> product.id != action.payload.id)
-                FindProduct.Count += action.payload.Count
+                FindProduct.Count += action.payload.Count 
                 state.products = [...extractedProducts,FindProduct]
                 writeFromBasketToStorage(state.products)
             }else{
@@ -37,8 +37,9 @@ export const BasketSlice = createSlice({
             state.drawer = !state.drawer
         },
         setTotalCount:(state)=>{
+            state.totalCount = 0
             state.products && state.products.map((product)=>{
-                state.totalCount += product.price
+                state.totalCount += product.price * product.Count
             })
         }
     },

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { setSelectProduct } from '../Redux/Slices/ProductsSlice';
 import { FaRegStar , FaRegStarHalfStroke , FaStar } from "react-icons/fa6";
 import { FaPlus  , FaMinus , FaShoppingBasket } from "react-icons/fa";
-import { addtoBasket } from '../Redux/Slices/BasketSlice';
+import { addtoBasket, setTotalCount } from '../Redux/Slices/BasketSlice';
 
 export default function ProductDetail() {
     
@@ -32,6 +32,7 @@ export default function ProductDetail() {
             id,title,image,price,category,Count
         }
         Dispatch(addtoBasket(payload))
+        Dispatch(setTotalCount())
     }
 
     const getProductById = () => {
