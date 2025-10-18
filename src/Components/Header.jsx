@@ -5,11 +5,13 @@ import { SiVitest } from "react-icons/si";
 import { useNavigate } from 'react-router-dom';
 import { FaShoppingBasket } from "react-icons/fa";
 import Badge from '@mui/material/Badge';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDrawer } from '../Redux/Slices/BasketSlice';
 
 function Header() {
   
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const Body = document.body
   const [ThemeCh,SetThemeCh] = useState(false)
@@ -56,7 +58,7 @@ function Header() {
             {ThemeCh? <CiDark onClick={ChangeTheme} className="cursor-pointer" /> : <CiLight onClick={ChangeTheme} className="cursor-pointer" />}
           </div>
           <div className='Tehem'>
-            <Badge badgeContent={products.length} color='warning'>
+            <Badge onClick={()=>dispatch(setDrawer())} badgeContent={products.length} color='warning'>
               <FaShoppingBasket/>
             </Badge>
           </div>
